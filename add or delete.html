@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a"></p>
+    <form>
+    <br>
+    <input type="reset" id="b" onclick="func()" value="Change Detail">
+    <br>
+    <input type="text" id="w" placeholder="First name" required >
+    <br>
+    <input type="text" id="r" placeholder="Last name" required>
+    <br>
+    <input type="text" id="v" placeholder="id"  required>
+    <br>  
+    <input type="button" id="d" onclick="func1()" value="Delete First Name">
+    <br>
+    <input type="button" id="qw" onclick="func2()" value="Delete Last Name">
+    <br>
+    <input type="button" id="we" onclick="func3()" value="Delete id">
+      </form>
+    <script>
+    var person = {
+  firstName: "Joe",
+  lastName: "Mama",
+  id: 5566,
+  fulldetail : function() {
+
+    return person.firstName + "<br> " + person.lastName +"<br>"+person.id;
+  }
+};
+document.getElementById("a").innerHTML = person.fulldetail();
+
+function func(){
+person.firstName=document.getElementById("w").value;
+person.lastName=document.getElementById("r").value;
+person.id=document.getElementById("v").value;
+
+document.getElementById("a").innerHTML = person.firstName + "<br> " + person.lastName +"<br>"+person.id;
+}
+function func1(){
+  delete person.firstName;
+  document.getElementById("a").innerHTML = person.firstName + "<br> " + person.lastName +"<br>"+person.id;
+}
+function func2(){
+  delete person.lastName;
+  document.getElementById("a").innerHTML = person.firstName + "<br> " + person.lastName +"<br>"+person.id;
+}
+function func3(){
+  delete person.id;
+  document.getElementById("a").innerHTML = person.firstName + "<br> " + person.lastName +"<br>"+person.id;
+}
+    </script>
+</body>
+</html>

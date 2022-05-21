@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#a").click(function(){
+    $("p").hide();
+  });
+});
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+$(document).ready(function(){
+  $("#b").click(function(){
+      alert("chirag is la");
+  })
+})
+$(document).ready(function(){
+  $("#e").click(function(){
+      var a= $("#d").val();
+      $("#g").append(a+"<br>");
+  })
+})
+$(document).ready(function(){
+  $("#img").click(function(){
+      var a= $("#d").val();
+      $("#i").append("'<img src='image_2022-03-31_13-59-51.png>'");
+  })
+})
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+<button id="a">click this to hide para</button>
+<button id="b">click me</button>
+<input type="text" id="d">
+<button id="e">Submit</button>
+<p id="i"><button id="img">Image</button> </p>
+<p id="g"></p>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle View</title>
+    <style>
+    #d{
+        margin-top: 1.5em;
+        text-align: center;
+    }
+   .switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border:2px solid black; 
+  -webkit-transition: .4s;
+  transition: .4s;
+
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(56px);
+  -ms-transform: translateX(56px);
+  transform: translateX(56px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+    </style> 
+</head>
+<body id="a">
+    <div id="d">
+    <label class="switch">
+        <input type="checkbox"  id="c" onchange="func()">
+        <span class="slider round"></span>
+        
+      </label>
+    </div>
+    <h1 id="w" style="text-align: center;">Toggle Using JQuery</h2>
+    <script>
+        function func(){
+            if (document.getElementById("c").checked){
+            document.getElementById("a").style.background="black";
+            document.getElementById("w").style.color="white";
+            }
+            else {
+                document.getElementById("a").style.background="white";
+                document.getElementById("w").style.color="black";
+            }
+        }
+        
+    </script>
+</body>
+</html>

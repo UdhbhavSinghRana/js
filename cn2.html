@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Balls</title>
+<style>
+    .a{
+        
+    }
+    .b{
+        background-color: rgb(178, 243, 243);
+        display: flex;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+    }
+    .c{
+        flex: 20%;
+        border-radius: 100%;
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+   <center> <input type="button" id="a" value="Add Balls" onclick="func()" style="width: 150px; height: 50px;"></center>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="b" >
+    </div>
+
+    <script>
+        const colr=[ 'red', 'blue', 'yellow', 'lightgrey', 'darkorchid', 'black', 'orange', 'deeppink', 'green', 'purple', 'saddlebrown', 'lightseagreen', 'deepskyblue', 'firebrick','crimson']
+        function func(){
+         var p = document.createElement("div");
+         var w = document.querySelector('.b');
+         p.style.width = "100px";
+         p.style.height = "100px";
+         p.style.borderRadius="100%";
+         p.style.backgroundColor= colr[Math.floor(Math.random()*15)];
+     
+         w.appendChild(p);
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+</style>
+<body>
+    <table border="1">
+    <tr>
+    <td colspan="12">
+        <h3 id="a"onclick="func()">YOU</h3>
+    </td>
+    <td colspan="12">
+        <h3 id="b" onmouseover="func4()">Are</h3>
+    </td>
+    <td colspan="12">
+        <h3 id="c" onmouseout="func5()">In</h3>
+    </td>
+    <td colspan="12">
+        <h3 id="d" ondblclick="func2()">Chitkara</h3>
+    </td>
+    <td colspan="12">
+        <h3 id="e" onmouseup="func3()">University</h3>
+    </td>
+    </tr>
+    <tr>
+        <td colspan="15">
+            <h3 id="f" onmousedown="func6()" >YOUR</h3>
+        </td>
+        <td colspan="15">
+            <h3 id="g" onmousedown="func7()" >Group</h3>
+        </td>
+        <td colspan="15">
+            <h3 id="h" onmousedown="func8()" >is</h3>
+        </td>
+        <td colspan="15">
+            <h3 id="i" onmousedown="func9()" >G27</h3>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="15">
+            <input type="text" onkeypress="func10()" id="j">
+        </td>
+        <td colspan="15">
+            <input type="text" onkeypress="func11()" id="oo">
+        </td>
+        <td colspan="15">
+            <input type="text" onkeyup="func12()" id="l">
+        </td>
+        <td colspan="15">
+            <input type="text" onkeypress="func13()" id="m">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="20">
+            <p id="j1">
+            <input id="j" type="button" onclick="func14()" value="multiplication table of 2">
+            
+                
+            </p>
+            </td>
+            <td colspan="20">
+            <p id="j2">
+                <input id="rr" type="button" onclick="func15()" value="multiplication table of 5">
+                
+    
+                </p>
+        </td>
+        <td colspan="20">
+            <div id="xx">
+            <input type="button" onclick="func16()" value="Image change">
+             <p>hello </p>
+        </div>
+        <style>
+            #xx{
+                background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
+                height: 200px;
+            }
+        </style>
+        </td>
+    </tr>
+    </table>
+<script>
+    function func(element){
+        document.getElementById("a").style.color="red"
+    }
+    function func2(element){
+        document.getElementById("d").style.color="red"
+    }
+    function func3(element){
+        document.getElementById("e").style.color="purple"
+    }
+    function func4(element){
+        document.getElementById("b").style.color="yellow"
+    }
+    function func5(element){
+        document.getElementById("c").style.color="blue"
+    }
+    function func6(){
+        document.getElementById("f").style.color="green"
+    }
+    function func7(){
+        document.getElementById("g").style.color="green"
+    }
+    function func8(){
+        document.getElementById("h").style.color="green"
+    }
+    function func9(){
+        document.getElementById("i").style.background="green"
+    }
+    function func10(){
+        document.getElementById("j").style.background="green"
+    }
+    function func11(){
+        document.getElementById("oo").style.background="green"
+    }
+    function func12(){
+        document.getElementById("l").style.background="green"
+    }
+    function func13(){
+        document.getElementById("m").style.background="green"
+    }
+    function func14(){
+       
+        var a3 =10
+        var b2 = 1
+        var c 
+        var d = ""
+        for (let i=10;  i>0; i--) {
+            c=b2*2;
+            a3-=1;
+            b2=b2+1;
+            d= d+String(c) +"<br>"
+            document.getElementById('j1').innerHTML = d;
+         
+        }
+       
+    }
+    function func15(){
+       
+       var a3 =10
+       var b2 = 1
+       var c 
+       var d = ""
+       for (let i=10;  i>0; i--) {
+           c=b2*5;
+           a3-=1;
+           b2=b2+1;
+           d= d+String(c) +"<br>"
+           document.getElementById('j2').innerHTML = d;
+        
+       }
+      
+   }
+   function func16(){
+    document.getElementById("xx").style.backgroundImage= "url('1.jpg')";
+   }
+</script>
+
+</body>
+</html>

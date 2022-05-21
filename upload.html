@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #fle{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    #fa{
+        flex: 60%;
+    }
+    #ab{
+        flex: 39%;
+    }
+    #line{
+        flex: 1%;
+        border-left: 6px solid black;
+        height: 1000px;
+        padding-left: 2%;
+        font-size: 20px;
+    }
+    .k{
+        background-color: green;
+    }
+    .l{
+        background-color: green;
+    }
+    .w{
+        background-color: green;
+    }
+    #ji{
+        background-color: lime;
+    }
+    #xx{
+        background-color: grey;
+    }
+</style>
+<body>
+    
+    <div id="fle">
+    <form id="fa">
+        <center> <h1>Add Student Data</h1> </center>
+    <center> <p>Roll No. &nbsp; &nbsp; &nbsp;</p>   <input type="text" id="a"> </center>
+     <br>
+     <br>
+     <br>
+     <br>
+
+    <center> <p>Name &nbsp; &nbsp; &nbsp;</p>   <input type="text" id="b"> </center>
+     <br>
+     <br>
+     <br>
+     <br>
+     <center><p>Marks &nbsp; &nbsp; &nbsp;</p>   <input type="text" id="c"> </center>
+     <br>
+     <br>
+     <br>
+     <br>
+     <center><input type="reset" id="d" onclick="func()"> </center>
+    </form>
+    
+    <div id="ab">
+        <p id="line"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    </div>
+    </div>
+    <p class="k"></p>
+    <p class="l"></p>
+    <p class="w"></p>
+    <script>
+        var s="";
+        var g=1;
+        function func(){
+            var x=document.getElementById("a").value;
+            var y=document.getElementById("b").value;
+            var z=document.getElementById("c").value;
+            var p=document.getElementById("line");
+           
+            g++;
+            if (g%2){
+                s= s+('<spam id="xx">'+ "Roll No. - "+('<spam id="ji" >'+x+'</spam>')+","+('<spam id="ji" >'+y+'</spam>')+" "+"has scored "+" "+('<spam id="ji" >'+z+'</spam>')+"marks" +"<br>"+"<br>"+'</spam>')
+                document.getElementById("line").innerHTML=s;
+            }
+            else{
+                s=s+"Roll No. - "+('<spam id="ji" >'+x+'</spam>')+","+('<spam id="ji" >'+y+'</spam>')+" "+"has scored "+" "+('<spam id="ji" >'+z+'</spam>')+"marks" +"<br>"+"<br>"
+                document.getElementById("line").innerHTML=s;
+            }
+        }
+    </script>
+</body>
+</html>

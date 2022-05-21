@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#a").click(function(){
+                $("#a ").css("color","red");
+            })
+
+        })
+        $(document).ready(function(){
+            $("#b").dblclick(function(){
+                $("#b ").css("color","red");
+            })
+
+        })
+        $(document).ready(function(){
+            $("#c").mouseover(function(){
+                $("#c ").css("color","red");
+            })
+
+        })
+        $(document).ready(function(){
+            $("#d").keydown(function(){
+                $("#d ").css("color","red");
+            })
+
+        })
+        $(document).ready(function(){
+            $("#e").keyup(function(){
+                $("#e ").css("color","red");
+            })
+
+        })
+    </script>
+</head>
+<body>
+  
+    <div>
+        <h1>List</h1>
+        <ol >
+        <li id="a" >
+            App
+        </li>
+        <li id="b">
+            b
+        </li > 
+        <li id="c">
+            c
+        </li> 
+        <li>
+            d
+        </li>
+        <li>
+            <input id="d" type="text">
+        </li>
+        <li>
+            <input id="e" type="text">
+        </li>
+    </ol>
+    </div>
+</body>
+</html>

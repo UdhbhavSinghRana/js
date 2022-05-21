@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>coding ques 2</title>
+    </head>
+    
+    <body>
+        <p id="para"></p>
+  
+    
+    <script>
+        class person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+        
+        var person1 = new person("Udhbhav Rana", 20);
+        var x=window.prompt("enter car color")
+        person1.carColor = x;
+        console.log(person1);
+        document.getElementById("para").innerHTML = "Name:" + person1.name + "<br>"+ "age"+
+        person1.age +"<br>"+"car color:" +person1.carColor;
+    </script>
+    </body>
+</html>

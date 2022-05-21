@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a" placeholder="Number1">
+    <input type="text" id="b" placeholder="Number2">
+    <input type="button" id="c" value="Mutiply" onclick="func1()">
+    <input type="button" id="d" value="Divide" onclick="func2()">
+    <input type="button" id="e" value="Add" onclick="func3()">
+    <input type="button" id="f" value="Subtract" onclick="func4()">
+    <p>Result:</p>
+    <p id="w"></p>
+<script>
+    function func1(){
+        var p,q;
+        p = document.getElementById("a").value;
+        q  = document.getElementById("b").value;
+        document.getElementById("w").innerHTML = p*q;
+    }
+    function func2(){
+        var p,q;
+        p = document.getElementById("a").value;
+        q  = document.getElementById("b").value;
+        document.getElementById("w").innerHTML = p/q;
+
+    }
+    function func3(){
+        var p,q;
+        p = document.getElementById("a").value;
+        p= parseInt(p);
+        q  = document.getElementById("b").value;
+        q= parseInt(q);
+
+        document.getElementById("w").innerHTML = p+q;
+
+    }
+    function func4(){
+        var p,q;
+        p = document.getElementById("a").value;
+        q  = document.getElementById("b").value;
+        document.getElementById("w").innerHTML = p-q;
+
+    }
+</script>
+</body>
+</html>
